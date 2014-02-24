@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour {
 
 	//functions
 	IEnumerator activateGuiItemPickup(string item){
-		guiItemPickupNotif.text = "You picked up " + "'" + item + ";";
+		guiItemPickupNotif.text = "You picked up " + "'" + item + "'";
 		yield return new WaitForSeconds(2.0f);
 		guiItemPickupNotif.text = "";
 	}
