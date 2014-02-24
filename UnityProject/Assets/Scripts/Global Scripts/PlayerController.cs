@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour {
 	//get the camera game object and the camera componet to get where the mouse position is then set it to world point and lookat
 	private Camera cameraComp;
 
+	public GUIText guiItemPickupNotif;
+
 	public GUIText reloadingInfoGui;
 	private string reloadingTextActiveTxt; 
 
@@ -80,6 +82,12 @@ public class PlayerController : MonoBehaviour {
 	public GameObject shotgunShellEjectSound;
 
 	//functions
+	IEnumerator activateGuiItemPickup(string item){
+		guiItemPickupNotif.text = "You picked up " + "'" + item + ";";
+		yield return new WaitForSeconds(2.0f);
+		guiItemPickupNotif.text = "";
+	}
+
 	IEnumerator playShotgunShellEjectSound(){
 		yield return new WaitForSeconds(0.2f);
 		shotgunShellEjectSound.audio.Play();
@@ -95,7 +103,6 @@ public class PlayerController : MonoBehaviour {
 		if(currentWeapon == "Pistol"){
 			Clip = pistolMaxClip;
 			guiWeaponText.text = currentWeapon + "" + Clip + "/" + pistolMaxClip;
-
 		} else if (currentWeapon == "SMG"){
 			Clip = smgMaxClip;
 			guiWeaponText.text = currentWeapon + "" + Clip + "/" + smgMaxClip;
@@ -118,6 +125,7 @@ public class PlayerController : MonoBehaviour {
 			guiWeaponText.text = currentWeapon + "" + Clip + "/" + pistolMaxClip;
 			bulletsPerShot = pistolBulletsPerShot;
 			reloadTimeDelay = pistolReloadTime;		
+			StartCoroutine(activateGuiItemPickup("Pistol"));
 		} else if (weapon == weaponList[1]){
 			currentWeapon = "SMG";
 			Clip = smgMaxClip;
@@ -127,6 +135,7 @@ public class PlayerController : MonoBehaviour {
 			guiWeaponText.text = currentWeapon + "" + Clip + "/" + smgMaxClip;
 			bulletsPerShot = smgBulletsPerShot;
 			reloadTimeDelay = smgReloadTime;
+			StartCoroutine(activateGuiItemPickup("SMG"));
 		} else if (weapon == weaponList[2]){
 			currentWeapon = "Shotgun";
 			Clip = shotgunMaxClip;
@@ -136,6 +145,7 @@ public class PlayerController : MonoBehaviour {
 			guiWeaponText.text = currentWeapon + "" + Clip + "/" + shotgunMaxClip;
 			bulletsPerShot = shotgunBulletsPerShot;
 			reloadTimeDelay = shotgunReloadTime;
+			StartCoroutine(activateGuiItemPickup("Shotgun"));
 		}
 	
 	}
@@ -194,6 +204,8 @@ public class PlayerController : MonoBehaviour {
 
 		//init guis
 		guiWeaponText.text = currentWeapon + "" + Clip + "/" + pistolMaxClip; //starting weapon is pistol		
+		guiItemPickupNotif.text = "";
+
 	}
 
 	void Update(){
