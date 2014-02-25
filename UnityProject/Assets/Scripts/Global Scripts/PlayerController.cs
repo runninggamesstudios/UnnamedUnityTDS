@@ -12,8 +12,6 @@ public class PlayerController : MonoBehaviour {
 	public GUIText reloadGui;
 	private string reloadGuiText; 
 
-	private PlayerHealth healthScript;
-
 	public GameObject cameraGameOb;
 	private CameraMoveScript cameraScript;
 	private Camera cameraComp;
@@ -160,9 +158,7 @@ public class PlayerController : MonoBehaviour {
 		reloadGui.text = "";
 		reloading = false;
 		reloadingTextActiveTxt = "Reloading..";
-		reloadingInfoGui.text = "";
-
-		healthScript = gameObject.GetComponent<PlayerHealth>();
+		reloadingInfoGui.text = "";	
 
 		guiWeaponText = guiWeaponTextGameObj.GetComponent<GUIText>();
 
@@ -176,21 +172,21 @@ public class PlayerController : MonoBehaviour {
 
 		pistolMaxClip = 19;
 		pistolFireRate = 0.23f;// def is 0.23
-		pistolAccuracy = 2.0f; //def is 2
+		pistolAccuracy = 2.6f; //def is 2
 		pistolCameraShake = 60; // def is 60
 		pistolBulletsPerShot = 1;
-		pistolReloadTime = 0.5f;
+		pistolReloadTime = 0.8f;
 
 		smgMaxClip = 30;
 		smgFireRate = 0.18f;
-		smgAccuracy = 2f;
+		smgAccuracy = 3.0f;
 		smgCameraShake = 110;// defi s 110
 		smgBulletsPerShot = 1;
-		smgReloadTime = 0.5f;
+		smgReloadTime = 0.8f;
 
 		shotgunMaxClip = 8;
 		shotgunFireRate = 0.5f;
-		shotgunAccuracy = 2.0f;// def is 2.0
+		shotgunAccuracy = 3.0f;// def is 2.0
 		shotgunCameraShake = 200;
 		shotgunBulletsPerShot = 6; //def is 6
 		shotgunReloadTime = 3.0f;
@@ -249,7 +245,6 @@ public class PlayerController : MonoBehaviour {
 					guiWeaponText.text = currentWeapon + "" + Clip + "/" + shotgunMaxClip;
 				}
 
-				//healthScript.StartCoroutine(healthScript.shakeCamera(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f), cameraShake));
 				cameraScript.StartCoroutine(cameraScript.shakeCamera(cameraShake));
 
 				for(int i = 0; i < bulletsPerShot; i++){

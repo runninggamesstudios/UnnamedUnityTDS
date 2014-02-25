@@ -45,7 +45,7 @@ public class PlayerHealth : MonoBehaviour {
 		if (playerDamage > 0) {
 			playerHealth = playerHealth - playerDamage;
 
-			StartCoroutine(shakeCamera(Random.Range(-2.0f, 2.0f), Random.Range(-2.0f, 2.0f), 110));
+			StartCoroutine(shakeCamera(Random.Range(-2.0f, 2.0f), Random.Range(-2.0f, 2.0f), 210));
 
 			playerDamage = 0;	
 		}
