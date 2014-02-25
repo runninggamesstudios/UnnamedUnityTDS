@@ -14,8 +14,8 @@ public class PlayerController : MonoBehaviour {
 
 	private PlayerHealth healthScript;
 
-	public GameObject cameraGameOb; // 
-	//get the camera game object and the camera componet to get where the mouse position is then set it to world point and lookat
+	public GameObject cameraGameOb;
+	private CameraMoveScript cameraScript;
 	private Camera cameraComp;
 
 	public GUIText guiItemPickupNotif;
@@ -76,6 +76,8 @@ public class PlayerController : MonoBehaviour {
 	public float reloadTimeDelay; //def is 0.5
 
 	private float cameraShake;
+
+
 
 	private float bulletsPerShot; 
 
@@ -165,7 +167,7 @@ public class PlayerController : MonoBehaviour {
 		guiWeaponText = guiWeaponTextGameObj.GetComponent<GUIText>();
 
 		cameraComp = cameraGameOb.GetComponent<Camera> ();
-	  
+		cameraScript = cameraGameOb.GetComponent<CameraMoveScript> ();
 		//init currentWeapon, WEAPON SPECS AND WeaponList
 		weaponList = new string[3];
 		weaponList[0] = "Pistol";
@@ -247,7 +249,8 @@ public class PlayerController : MonoBehaviour {
 					guiWeaponText.text = currentWeapon + "" + Clip + "/" + shotgunMaxClip;
 				}
 
-				healthScript.StartCoroutine(healthScript.shakeCamera(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f), cameraShake));
+				//healthScript.StartCoroutine(healthScript.shakeCamera(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f), cameraShake));
+				cameraScript.StartCoroutine(cameraScript.shakeCamera(cameraShake));
 
 				for(int i = 0; i < bulletsPerShot; i++){
 					Instantiate(
