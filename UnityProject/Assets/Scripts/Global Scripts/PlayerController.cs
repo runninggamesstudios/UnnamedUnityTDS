@@ -172,7 +172,7 @@ public class PlayerController : MonoBehaviour {
 
 		pistolMaxClip = 19;
 		pistolFireRate = 0.23f;// def is 0.23
-		pistolAccuracy = 2.6f; //def is 2
+		pistolAccuracy = 3.0f; //def is 2.6
 		pistolCameraShake = 60; // def is 60
 		pistolBulletsPerShot = 1;
 		pistolReloadTime = 0.8f;
@@ -180,7 +180,7 @@ public class PlayerController : MonoBehaviour {
 		smgMaxClip = 30;
 		smgFireRate = 0.18f;
 		smgAccuracy = 3.0f;
-		smgCameraShake = 110;// defi s 110
+		smgCameraShake = 110;// de f i s 110
 		smgBulletsPerShot = 1;
 		smgReloadTime = 0.8f;
 
