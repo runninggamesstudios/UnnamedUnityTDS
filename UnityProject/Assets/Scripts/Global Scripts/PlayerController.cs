@@ -38,8 +38,8 @@ public class PlayerController : MonoBehaviour {
 
 	private int smgMaxClip; //def is 30
 	private float smgFireRate; //def is 0.18
-	private float smgAccuracy; //def is 2
-	private int smgCameraShake; //def is 110
+	private float smgAccuracy; //def is 3.5
+	private int smgCameraShake; //def is 150
 	private int smgBulletsPerShot; //1 if its not a shotgun
 	private float smgReloadTime; //def is 0.5
 
@@ -179,8 +179,8 @@ public class PlayerController : MonoBehaviour {
 
 		smgMaxClip = 30;
 		smgFireRate = 0.18f;
-		smgAccuracy = 3.0f;
-		smgCameraShake = 110;// de f i s 110
+		smgAccuracy = 2.8f;
+		smgCameraShake = 150;// de f i s 150
 		smgBulletsPerShot = 1;
 		smgReloadTime = 0.8f;
 
