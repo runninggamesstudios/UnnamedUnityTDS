@@ -171,8 +171,8 @@ public class PlayerController : MonoBehaviour {
 		weaponList[2] = "Shotgun";
 
 		pistolMaxClip = 19;
-		pistolFireRate = 0.23f;// def is 0.23
-		pistolAccuracy = 3.0f; //def is 2.6
+		pistolFireRate = 0.25f;// def is 0.25
+		pistolAccuracy = 3.2f; //def is 3.2
 		pistolCameraShake = 60; // def is 60
 		pistolBulletsPerShot = 1;
 		pistolReloadTime = 0.8f;
@@ -186,7 +186,7 @@ public class PlayerController : MonoBehaviour {
 
 		shotgunMaxClip = 8;
 		shotgunFireRate = 0.5f;
-		shotgunAccuracy = 3.0f;// def is 2.0
+		shotgunAccuracy = 4.0f;// def is 4.0
 		shotgunCameraShake = 200;
 		shotgunBulletsPerShot = 6; //def is 6
 		shotgunReloadTime = 3.0f;
