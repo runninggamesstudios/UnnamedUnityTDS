@@ -1,8 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Global Scripts\PlayerController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Global Scripts\ItemPickupScript.cs">
     <Files>
-      <File FileName="Assets\Scripts\Global Scripts\PlayerController.cs" Line="175" Column="23" />
+      <File FileName="Assets\Scripts\Global Scripts\ItemPickupScript.cs" Line="30" Column="55" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
