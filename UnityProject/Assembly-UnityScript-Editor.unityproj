@@ -5,11 +5,11 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{5B580621-09B4-68CB-B5F4-5B9DD210A60F}</ProjectGuid>
+	<ProjectGuid>{8869CCC3-C429-23F7-1189-F19B43E8872C}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
-	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<AssemblyName>Assembly-UnityScript-Editor</AssemblyName>
 	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
 	<FileAlignment>512</FileAlignment>
 	<BaseDirectory>Assets</BaseDirectory>
@@ -46,19 +46,30 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Global Scripts\BoundryScript.cs" />
-     <Compile Include="Assets\Scripts\Global Scripts\CameraIntroScript.cs" />
-     <Compile Include="Assets\Scripts\Global Scripts\CameraMoveScript.cs" />
-     <Compile Include="Assets\Scripts\Global Scripts\EnemyAIScript.cs" />
-     <Compile Include="Assets\Scripts\Global Scripts\EnemyHealthScript.cs" />
-     <Compile Include="Assets\Scripts\Global Scripts\EnemyProjectileScript.cs" />
-     <Compile Include="Assets\Scripts\Global Scripts\ItemPickupScript.cs" />
-     <Compile Include="Assets\Scripts\Global Scripts\LevelCompleteScript.cs" />
-     <Compile Include="Assets\Scripts\Global Scripts\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\Global Scripts\PlayerDeathRestartScript.cs" />
-     <Compile Include="Assets\Scripts\Global Scripts\PlayerHealth.cs" />
-     <Compile Include="Assets\Scripts\Global Scripts\ProjectileScript.cs" />
+     <Compile Include="Assets\Editor\Snap.js" />
      <None Include="Assets\BoShadowShader.shader" />
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>E:\Program Files (x86)\Unity\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions">
+ <HintPath>E:\Program Files (x86)\Unity\Editor\Data\PlaybackEngines\iPhonePlayer\EditorExtensions\UnityEditor.iOS.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.WP8.Extensions">
+ <HintPath>E:\Program Files (x86)\Unity\Editor\Data\PlaybackEngines\WP8Support\EditorExtensions\UnityEditor.WP8.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Metro.Extensions">
+ <HintPath>E:\Program Files (x86)\Unity\Editor\Data\PlaybackEngines\MetroSupport\EditorExtensions\UnityEditor.Metro.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.BB10.Extensions">
+ <HintPath>E:\Program Files (x86)\Unity\Editor\Data\PlaybackEngines\BB10Player\EditorExtensions\UnityEditor.BB10.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Android.Extensions">
+ <HintPath>E:\Program Files (x86)\Unity\Editor\Data\PlaybackEngines\AndroidPlayer\EditorExtensions\UnityEditor.Android.Extensions.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp.csproj">
+      <Project>{5B580621-09B4-68CB-B5F4-5B9DD210A60F}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,8 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Global Scripts\ItemPickupScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\Unity\NewUnity3DTDS\Assets\ImageEffects\Classes\GodRays.js">
     <Files>
-      <File FileName="Assets\Scripts\Global Scripts\ItemPickupScript.cs" Line="30" Column="55" />
+      <File FileName="..\..\..\Unity\NewUnity3DTDS\Assets\ImageEffects\Classes\GodRays.js" Line="10" Column="1" />
+      <File FileName="..\..\..\Unity\NewUnity3DTDS\Assets\ImageEffects\ShaderDir\IndieRadialBlur.shader" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

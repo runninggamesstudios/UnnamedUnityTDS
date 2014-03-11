@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour {
 	private float nextFire;
 	public float accuracy; //def is 1.5
 
-	public float walkSpeed; //def is 450
+	public float walkSpeed; //def is 450 NORMAL nonNORMAL Is 15
 
 	private float xInputAxis; //A D
 	private float zInputAxis; // W S
@@ -173,7 +173,7 @@ public class PlayerController : MonoBehaviour {
 		pistolMaxClip = 19;
 		pistolFireRate = 0.25f;// def is 0.25
 		pistolAccuracy = 3.2f; //def is 3.2
-		pistolCameraShake = 60; // def is 60
+		pistolCameraShake = 130; // def is 60
 		pistolBulletsPerShot = 1;
 		pistolReloadTime = 0.8f;
 
@@ -219,12 +219,12 @@ public class PlayerController : MonoBehaviour {
 		transform.LookAt (new Vector3(mousePos.x, transform.position.y, mousePos.z), Vector3.up);	
 		//walking
 		//Vector3 forward = transform.TransformDirection (new Vector3(xCtrlAxis, 0.0f, zCtrlAxis));
+		//controller.SimpleMove(new Vector3(xInputAxis, 0.0f, zInputAxis) * walkSpeed * Time.deltaTime);
 		controller.SimpleMove(new Vector3(xInputAxis, 0.0f, zInputAxis) * walkSpeed * Time.deltaTime);
-
 
 		//reloading
 		if(Clip != 0){
-			if(Input.GetKeyDown(KeyCode.R)){
+			if(Input.GetKeyDown(KeyCode.R)){ 	
 				StartCoroutine("reload");
 			
 			}

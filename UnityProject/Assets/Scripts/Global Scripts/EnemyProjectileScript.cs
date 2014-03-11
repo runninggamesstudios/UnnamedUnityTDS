@@ -8,7 +8,11 @@ public class EnemyProjectileScript : MonoBehaviour {
 	private PlayerHealth playerHealthScript;
 	
 	//someScript = GetComponent (ExampleScript);
-	
+
+	void OnTiggerExit(Collider obj){
+		Destroy(gameObject);
+	}
+
 	void OnTriggerEnter(Collider obj){
 		if (obj.gameObject.tag == "LevelObject") {
 			Destroy (gameObject);

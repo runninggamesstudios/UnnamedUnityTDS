@@ -125,6 +125,7 @@ public class EnemyAIScript : MonoBehaviour {
 					runDodgeBullets = false;
 					StopCoroutine("dodgeBullets");
 					zAxis = 1;
+					xAxis = 0; //cant believe i forgot about this... sigh
 				}
 			}
 		}
