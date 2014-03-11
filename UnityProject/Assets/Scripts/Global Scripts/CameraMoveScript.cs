@@ -20,7 +20,7 @@ public class CameraMoveScript : MonoBehaviour {
 				Random.Range(-shakeAmount, shakeAmount),
 				Random.Range(-shakeAmount, shakeAmount)
 			);
-			yield return new WaitForSeconds(0.2f);
+			yield return new WaitForSeconds(0.3f); //def is 0.2
 			shakeMultiplier = new Vector3(0,0,0);	
 			
 		}
